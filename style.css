@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+  
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+h3, h4 {
+  margin: 0;
+  padding: 1em;
+}
+
+div {
+  padding: 1em;
+  min-width: 10em;
+}
+
+/* INLINE-BLOCK Padarome taip, kad div elementas nesoktu vienas po kitu */
+.sec1 {
+  width: 100%;
+}
+.sec1 div {
+  display: inline-block;
+  width: 33.3%;
+}
+  
+
+/* FLEXBOX */
+.sec3 {
+  display: flex;
+}
+
+.sec3 div {
+  width: 33.3%;
+}
+
+.header{
+    z-index: +2 ; 
+    top: 0;               /*nepaliekam jokio atstumo virš header*/
+    position: fixed;
+    width: 100%;
+    background-color: Silver;
+
+    display: flex;   /*turinio lygiuote vienoje linijoje*/
+                     /* display: inline; elem. vienoje linijoje
+                                           /* float: left;*/
+    justify-content: flex-end;   /* display: flex; turinio lyg
+    align-items: center;
+    padding: 0px;
+}
+
+
+/*    PAGRIDNINIS  MENIU   */
+.navigacijos_meniu{
+    box-sizing: border-box; /*Tai taikyti visiems elementams 
+                            /* border: 15px solid Gray; rėmelis
+    margin-top: 8px;           /*paraštės*/
+    padding: 0;                /*tuščių laukelių dydis:
+  }
+/*    PAGRIDNINIO  MENIU  TEKSTAS */
+.nav_text {
+  color: teal;
+  font-family: sans-serif;
+  font-size: 18px; 
+  text-decoration: none;
+  clear: flex-end; /* align-items: right; kaip elementas įterpiamas kito elemento viduje*/
+  width: 400px;
+
+}
