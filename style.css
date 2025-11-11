@@ -64,7 +64,7 @@ div {
 .nav_text {
   color: teal;
   font-family: sans-serif;
-  font-size: 18px; 
+  font-size: 20px; 
   text-decoration: none;
   clear: flex-end; /* align-items: right; kaip elementas įterpiamas kito elemento viduje*/
   width: 400px;
