@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+}
+
+h3, h4 {
+  margin: 0;
+  padding: 1em;
+}
+
+div {
+  padding: 1em;
+  min-width: 10em;
+}
+
+/* INLINE-BLOCK Padarome taip, kad div elementas nesoktu vienas po kitu */
+.sec1 {
+  width: 100%;
+}
+
+.sec1 div {
+  display: inline-block;
+  width: 25%;
+}
+
+.header {
+  z-index: 2;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: Silver;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+}
+
+/* PAGRINDINIS MENIU */
+.navigacijos_meniu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 10px;
+}
+
+.navigacijos_meniu div {
+  width: 25%;
+}
+
+/* PAGRINDINIO MENIU TEKSTAS */
+.nav_text {
+  color: teal;
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;    /* tekstas centre  */
+  display: block;         /* kad būtų kaip dėžutė ir veiktų teksto centruotė */
+  width: 400px;           /* arba auto/flex duoda vietos tam vienam tekstui 400 * 4*/
+
+  font-family: sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  clear: both;
+  width: 400px;
+}
+
+.nav_text:hover {
+  text-decoration: underline;
+}
+
