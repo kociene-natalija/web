@@ -39,6 +39,10 @@
 <input type="file" id="imageInput">
 
 <p id="result"></p>
+ loadModel();
+<img id="preview" style="max-width:300px; display:block; margin-top:20px;">
+
+
 
 <script>
   const URL = "./";  // modelio failų vieta
@@ -53,8 +57,9 @@
 
   document.getElementById("imageInput").addEventListener("change", async (event) => {
     const file = event.target.files[0];
-    const img = document.createElement("img");
-    img.src = URL.createObjectURL(file);
+    const img = document.getElementById("preview");
+   img.src = URL.createObjectURL(file);
+
 
     img.onload = async () => {
       const prediction = await model.predict(img);
