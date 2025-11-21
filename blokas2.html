@@ -33,24 +33,21 @@
     <a href="kontaktai.html" class="nav_text">Kontaktai</a>
   </div>
 </section>
-            
-   
-<h2>Įkelk nuotrauką</h2>
+
+ <h2>YRA SUKURTAS APMOKYTAS DI MODELIS, KURIS ATPAŽINS IŠ FOTO KAS ĮKELTA: šuo, katė ar arklys!   Įkelk nuotrauką</h2>
+  <h2>   Įkelk nuotrauką  iš failo: </h2>
 <input type="file" id="imageInput">
 
 <p id="result"></p>
- loadModel();
+
 <img id="preview" style="max-width:300px; display:block; margin-top:20px;">
 
-
-
+   
 <script>
-  const URL = "./";  // modelio failų vieta
-
+  const URL = "./";  // modelio failų vieta 
   let model;
-
   async function loadModel() {
-    model = await tmImage.load(URL + "model.json", URL + "metadata.json");
+  model = await tmImage.load(URL + "model.json", URL + "metadata.json");
   }
 
   loadModel();
