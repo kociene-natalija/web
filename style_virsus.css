@@ -25,7 +25,7 @@ div {
 
 .sec1 div {
   display: inline-block;
-  width: 25%;
+  width: 20%;
 }
 
 .header {
@@ -44,15 +44,26 @@ div {
 .navigacijos_meniu {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;              /* mažinami tarpai tarp blokų*/
   box-sizing: border-box;
-  margin-top: 8px;
-  padding: 10px;
+  margin-top: 2px;  /* kiek lieka nuo ekrano viršaus iki meniu*/
+  padding: 2px;     /* mažesni viršutiniai/apatiniai tarpai*/
 }
 
 .navigacijos_meniu div {
-  width: 25%;
+  height: 60px;   /*  meniu aukštis */
+  font-size: 16px;
+  width: 20%;
 }
+.navigacijos_meniu img {
+  width: 40px;        /* mažesnis negu meniu aukštis*/
+  height: 40px;
+  object-fit: contain; /* nesuspaudžia, bet gražiai sutalpina */
+  display: block;
+  margin: auto;         /* centruoja horizontaliai */
+  padding: 2px;         /* irgi tiek pat kiek meniu */
+}
+
 
 /* PAGRINDINIO MENIU TEKSTAS */
 .nav_text {
@@ -61,17 +72,30 @@ div {
   font-size: 20px;
   text-decoration: none;
   text-align: center;    /* tekstas centre  */
-  display: block;         /* kad būtų kaip dėžutė ir veiktų teksto centruotė */
-  width: 400px;           /* arba auto/flex duoda vietos tam vienam tekstui 400 * 4*/
-
-  font-family: sans-serif;
-  font-size: 20px;
-  text-decoration: none;
+  display: block;         /* kad būtų kaip dėžutė ir veiktų teksto centruotė */ 
   clear: both;
-  width: 400px;
+                          /* jeigu būtų: width: 400px;  arba auto/flex duoda vietos tam vienam tekstui 400 * 4*/
+  width: 100%;            /* užima visą div - tėvinį elementą */
+                         
+}
+
+.nav_text a {
+  font-size: inherit;  /* <a> elementas naudos tokią pačią spalvą ar šrifto dydį, kokį turi jo tėvinis <div> - nes a jo viduje*/
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav_text:hover {
   text-decoration: underline;
 }
+.active {
+  color: white;  / * kai jau aktyvu */
+  text-decoration: underline;
+
+  font-weight: bold;
+  font-size: 220px;
+  text-align: center;
+  padding: 10px;
+}
+
 
